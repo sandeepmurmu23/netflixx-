@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NETFLIXX BYPASS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="index.html">NETFLIXX <span>BYPASS</span></a>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="#movies">Movies</a>
+      <a href="#series">Series</a>
+      <a href="#others">Others</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+
+    <div class="search">
+      <input id="searchInput" placeholder="Search titles..." type="search">
+      <button id="searchButton">⌕</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="tag">YOUR ENTERTAINMENT HUB</p>
+        <h1>Discover your<br><span>next favourite.</span></h1>
+        <p>Explore movies, series and more — all in one place.</p>
+        <a class="btn" href="#movies">Explore titles →</a>
+      </div>
+
+      <div class="hero-art">
+        <div class="orb"></div>
+        <b>CINEMA<br>UNLIMITED</b>
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2>Browse by category</h2>
+      <a href="#movies">🎬 Movies</a>
+      <a href="#series">📺 Series</a>
+      <a href="#others">✨ Others</a>
+    </section>
+
+    <section class="section" id="movies">
+      <h2>New & Upcoming Movies</h2>
+      <div class="grid" id="movieGrid"></div>
+    </section>
+
+    <section class="section" id="series">
+      <h2>Popular & Upcoming Series</h2>
+      <div class="grid" id="seriesGrid"></div>
+    </section>
+
+    <section class="section" id="others">
+      <h2>Others</h2>
+      <div class="grid" id="othersGrid"></div>
+    </section>
+
+    <p class="empty" id="empty" hidden>
+      No titles found. Try another search.
+    </p>
+  </main>
+
+  <footer>
+    <b class="logo">NETFLIXX <span>BYPASS</span></b>
+    <p>Discover. Explore. Enjoy.</p>
+  </footer>
+
+  <!-- VIDEO PLAYER POPUP -->
+  <div class="shade" id="modal" hidden>
+    <div class="playerbox">
+      <button
+        id="closeModal"
+        class="close"
+        type="button"
+        aria-label="Close video player"
+      >×</button>
+
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+
+      <video id="player" controls playsinline></video>
+
+      <small id="playerMessage"></small>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html> 

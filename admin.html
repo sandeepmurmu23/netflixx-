@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | NETFLIXX BYPASS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="index.html">NETFLIXX <span>BYPASS</span></a>
+
+    <nav class="adminnav">
+      <a href="index.html">View Website</a>
+      <a href="admin.html">Admin Panel</a>
+    </nav>
+  </header>
+
+  <main class="admin">
+
+    <div class="adminhead">
+      <p class="tag">CONTENT MANAGEMENT</p>
+      <h1>Admin <span>Dashboard</span></h1>
+      <p>Add movies, series and other videos to your website.</p>
+    </div>
+
+    <section class="panel">
+      <h2>Publish a new title</h2>
+
+      <form id="uploadForm">
+
+        <label for="title">Movie / Series name *</label>
+        <input
+          id="title"
+          maxlength="100"
+          required
+          placeholder="e.g. The Adventure Begins"
+        >
+
+        <div class="formrow">
+          <div>
+            <label for="category">Category *</label>
+            <select id="category">
+              <option>Movies</option>
+              <option>Series</option>
+              <option>Others</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="releaseDate">Release date</label>
+            <input id="releaseDate" type="date">
+          </div>
+        </div>
+
+        <label for="description">Description *</label>
+        <textarea
+          id="description"
+          rows="4"
+          maxlength="1000"
+          required
+          placeholder="Write a short description..."
+        ></textarea>
+
+        <!-- ====================================== -->
+        <!-- UPLOAD POSTER IMAGE FOR YOUR MOVIE HERE -->
+        <!-- ====================================== -->
+
+        <label for="poster">Upload poster image *</label>
+        <input
+          id="poster"
+          type="file"
+          accept="image/*"
+          required
+        >
+
+        <div id="previewWrap" hidden>
+          <img id="preview" alt="Poster preview">
+        </div>
+
+        <!-- ====================================== -->
+        <!-- UPLOAD MOVIE / SERIES VIDEO FILE HERE  -->
+        <!-- ====================================== -->
+
+        <label for="video">Upload video *</label>
+        <input
+          id="video"
+          type="file"
+          accept="video/*"
+          required
+        >
+
+        <p class="hint">
+          Browser-only demo: choose a reasonably sized video.
+          For a public website, use server or cloud video storage.
+        </p>
+
+        <button class="btn" id="publish" type="submit">
+          Publish title
+        </button>
+
+        <p id="message" role="status"></p>
+
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="listhead">
+        <h2>Published titles</h2>
+        <span id="count">0 titles</span>
+      </div>
+
+      <div id="adminList"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <b class="logo">NETFLIXX <span>BYPASS</span></b>
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>
